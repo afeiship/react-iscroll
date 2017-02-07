@@ -93,9 +93,8 @@ export default class extends React.Component {
 
   initIscroll() {
     // Create new iscroll instance here
-    const {iScroll, options} = this.props;
-    const iScrollInstance = new iScroll(ReactDOM.findDOMNode(this), options);
-    this.iScrollInstance = iScrollInstance;
+    let {iScroll, options} = this.props;
+    this.iScrollInstance = new iScroll(ReactDOM.findDOMNode(this), options);
   }
 
   destoryIScroll() {
@@ -413,7 +412,7 @@ export default class extends React.Component {
         <div className="iscroll-body">
           {pullDown ? (
               <div ref="pullDown" className={classnames({'iscroll-pull-down': true, [pullDownCls]: true})}>
-                <i></i>
+                <i />
                 <span>{pullDownText[pullDownState]}</span>
               </div>
             ) : null}
@@ -422,7 +421,7 @@ export default class extends React.Component {
 
           {pullUp ? (
               <div className={classnames({'iscroll-pull-up': true, [pullUpCls]: true})}>
-                <i></i>
+                <i />
                 <span>{pullUpText[pullUpState]}</span>
               </div>
             ) : null}
