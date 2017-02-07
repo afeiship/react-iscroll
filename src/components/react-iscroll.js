@@ -44,7 +44,7 @@ export default class extends React.Component {
     pullUpThreshold: 55, //向上滑动临界值
   };
 
-  static defaultPropTypes = {
+  static propTypes = {
     options: React.PropTypes.object.isRequired,
     iScroll: React.PropTypes.func.isRequired,
     className: React.PropTypes.string, // 自定义class样式
@@ -332,7 +332,6 @@ export default class extends React.Component {
 
           let pullDownEl = this.refs.pullDown;
           pullDownEl.style.marginTop = `${y}px`;
-          pullDownEl.offsetHeight;
 
           animTime = 250 * (this.pullDownOffset + y) / this.pullDownOffset;
           state.pullDownStyle = {
