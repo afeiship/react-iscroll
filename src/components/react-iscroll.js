@@ -136,9 +136,9 @@ export default class extends React.Component {
 
   forbidScroll(distY) {
     const {pullUp, pullDown} = this.props;
-    // if (!pullUp && !pullDown) {
-    //   return true;
-    // }
+    if (!pullUp && !pullDown) {
+      return true;
+    }
     //判断是上滑还是下滑
     if (distY > 0 && !pullDown) { //向下
       return true;
