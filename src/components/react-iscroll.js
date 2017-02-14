@@ -28,6 +28,7 @@ const iScrollEvents = [
 export default class extends React.Component {
   static defaultProps = {
     options: {
+      click:true,
       mouseWheel: true, // 是否支持鼠标滚轮
       scrollbars: true, // 是否显示滚动条
       probeType: 2, // 滚动的节奏
