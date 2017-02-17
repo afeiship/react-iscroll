@@ -43,6 +43,7 @@ export default class extends React.Component {
     pullUpText: ['上滑加载更多...', '松开加载...', '加载中，请稍后...'],
     pullDownThreshold: 5, //向下滑动临界值
     pullUpThreshold: 55, //向上滑动临界值
+    handleRefresh:function(){}
   };
 
   static propTypes = {
@@ -410,7 +411,7 @@ export default class extends React.Component {
     return (
       <div className={`iscroll-wrapper${className}`} style={style || {}}>
         <div className="iscroll-body">
-          {pullDown && handleRefresh ? (
+          {pullDown ? (
               <div ref="pullDown" className={classnames({'iscroll-pull-down': true, [pullDownCls]: true})}>
                 <i />
                 <span>{pullDownText[pullDownState]}</span>
@@ -419,7 +420,7 @@ export default class extends React.Component {
 
           {this.props.children}
 
-          {pullUp && handleRefresh ? (
+          {pullUp ? (
               <div className={classnames({'iscroll-pull-up': true, [pullUpCls]: true})}>
                 <i />
                 <span>{pullUpText[pullUpState]}</span>
