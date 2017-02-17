@@ -410,7 +410,7 @@ export default class extends React.Component {
     return (
       <div className={`iscroll-wrapper${className}`} style={style || {}}>
         <div className="iscroll-body">
-          {pullDown ? (
+          {pullDown && handleRefresh ? (
               <div ref="pullDown" className={classnames({'iscroll-pull-down': true, [pullDownCls]: true})}>
                 <i />
                 <span>{pullDownText[pullDownState]}</span>
@@ -419,7 +419,7 @@ export default class extends React.Component {
 
           {this.props.children}
 
-          {pullUp ? (
+          {pullUp && handleRefresh ? (
               <div className={classnames({'iscroll-pull-up': true, [pullUpCls]: true})}>
                 <i />
                 <span>{pullUpText[pullUpState]}</span>
