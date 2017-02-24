@@ -15,6 +15,17 @@ ul,li{list-style: none;}
     background-color: #40C0CB;
     border-bottom: 2px solid #00A8C6;
   }
+
+  ul{
+    li{
+      height:40px;
+      line-height: 40px;
+      background: #f60;
+      color:#ccc;
+      margin-bottom:2px;
+      cursor: pointer;
+    }
+  }
 }
 
 .example-paging {

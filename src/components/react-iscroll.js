@@ -25,10 +25,21 @@ const iScrollEvents = [
   'scroll', 'scrollEnd', 'flick', 'zoomStart', 'zoomEnd'
 ];
 
+
+function iScrollClick(){
+	if (/iPhone|iPad|iPod|Macintosh/i.test(navigator.userAgent)) return false;
+	if (/Chrome/i.test(navigator.userAgent)) return (/Android/i.test(navigator.userAgent));
+	if (/Silk/i.test(navigator.userAgent)) return false;
+	if (/Android/i.test(navigator.userAgent)) {
+	   var s=navigator.userAgent.substr(navigator.userAgent.indexOf('Android')+8,3);
+	   return parseFloat(s[0]+s[3]) < 44 ? false : true
+    }
+}
+
 export default class extends React.Component {
   static defaultProps = {
     options: {
-      click:true,
+      click:iScrollClick(),
       mouseWheel: true, // 是否支持鼠标滚轮
       scrollbars: true, // 是否显示滚动条
       probeType: 2, // 滚动的节奏

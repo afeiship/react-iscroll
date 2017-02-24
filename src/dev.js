@@ -60,7 +60,9 @@ class Simple extends Component {
         <ReactIScroll iScroll={iScroll} className="example">
           <ul>
             {this.simpleList.map((item) =>
-              <li key={item.id}>{item.name}</li>
+              <li onClick={()=>{
+                alert(1234);
+                }} key={item.id}>{item.name}</li>
             )}
           </ul>
         </ReactIScroll>
