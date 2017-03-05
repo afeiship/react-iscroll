@@ -58,6 +58,8 @@ class Simple extends Component {
     return (
       <div>
         <ReactIScroll iScroll={iScroll} className="example">
+          <input type="datetime-local" id=""/>
+          <textarea className="cls1" cols="30" rows="10"></textarea>
           <ul>
             {this.simpleList.map((item) =>
               <li onClick={()=>{

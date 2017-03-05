@@ -26,6 +26,14 @@ ul,li{list-style: none;}
       cursor: pointer;
     }
   }
+
+
+  input{
+    &[type=datetime-local]{
+      height:40px;
+      line-height: 40px;
+    }
+  }
 }
 
 .example-paging {
