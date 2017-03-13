@@ -78,7 +78,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "iscroll": "^5.2.0",
+    "iscroll": "github:afeiship/iscroll",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   }
