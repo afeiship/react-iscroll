@@ -1,6 +1,8 @@
+import './style.scss';
+
+import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
-import './style.scss';
 
 /**!
  * iScroll React Component
@@ -59,18 +61,18 @@ export default class extends React.Component {
   };
 
   static propTypes = {
-    options: React.PropTypes.object.isRequired,
-    iScroll: React.PropTypes.func.isRequired,
-    className: React.PropTypes.string, // 自定义class样式
-    style: React.PropTypes.object, // 自定义style样式
-    children: React.PropTypes.node,
-    pullDown: React.PropTypes.bool, //是否显示向下刷新加载
-    pullUp: React.PropTypes.bool, //是否显示向上加载更多
-    pullDownText: React.PropTypes.array,
-    pullUpText: React.PropTypes.array,
-    pullDownThreshold: React.PropTypes.number,
-    pullUpThreshold: React.PropTypes.number,
-    handleRefresh: React.PropTypes.func //刷新后回调函数，定义要处理的逻辑，比如加载更多，刷新等
+    options: PropTypes.object.isRequired,
+    iScroll: PropTypes.func.isRequired,
+    className: PropTypes.string, // 自定义class样式
+    style: PropTypes.object, // 自定义style样式
+    children: PropTypes.node,
+    pullDown: PropTypes.bool, //是否显示向下刷新加载
+    pullUp: PropTypes.bool, //是否显示向上加载更多
+    pullDownText: PropTypes.array,
+    pullUpText: PropTypes.array,
+    pullDownThreshold: PropTypes.number,
+    pullUpThreshold: PropTypes.number,
+    handleRefresh: PropTypes.func //刷新后回调函数，定义要处理的逻辑，比如加载更多，刷新等
   };
 
   constructor(props) {
